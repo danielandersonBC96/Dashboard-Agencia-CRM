@@ -36,7 +36,7 @@ const Navbar = () => {
 
           }}
          >
-            <FlexBetween>
+              <FlexBetween>
                 <IconButton  onClick={() => console.log('open/close_sidebar')} >   
                   <MenuIcon/>
                 </IconButton>
@@ -47,22 +47,29 @@ const Navbar = () => {
                   p="0.1rem 1.5rem"          
                 >
                     <InputBase placeholder='Search'/>
-                    <Search/>
+                      <IconButton>
+                      <Search/>
 
-                </FlexBetween>
-                <FlexBetween gap="1.5rem">
-                    <IconButton  onClick={() => dispatch(setMode())}>
+                      </IconButton>
+                 </FlexBetween>
+              </FlexBetween>
+
+                   <FlexBetween gap="1.5rem">
+                      <IconButton  onClick={() => dispatch(setMode())}>
                       {theme.palette.mode === "dark" ? (
                         <DarkModeOutlined sx={{ fontSize: "25px" }} />
                             ) : (
                          <LightOutlined sx={{ fontSize: "25px" }} />
                            )}
-                    </IconButton>
-                    <IconButton>
-                        <SettingsOutlined sx={{fontSize:"25px"}}/>
-                    </IconButton>
-                </FlexBetween>
-            </FlexBetween>
+                      </IconButton>
+                        <IconButton>
+                           <SettingsOutlined sx={{fontSize:"25px"}}/>
+                          </IconButton>
+                       <FlexBetween>
+
+                      </FlexBetween>
+                   </FlexBetween>
+            
          </Toolbar>
     </AppBar>
   )

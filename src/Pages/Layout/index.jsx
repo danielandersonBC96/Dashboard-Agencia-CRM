@@ -8,9 +8,15 @@ import Navbar from 'Components/Navbar';
 const  Layout = () => {
   return (
     <div>
-      <h1>  Admin Dashboard</h1>
-       <Box width= "100%"  height="100%">
+    
+       <Box width= "100%"  height="100%"
+    
+       >
+          
         <Box>
+
+          <h1>  Admin Dashboard</h1>
+          
           <Navbar/>
           <Outlet/>
         </Box>
